@@ -15,7 +15,7 @@ import java.io.IOException;
 public class Leer {
     BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
     
-    public int leerInt(){
+    public int leerInt(String mensaje){
         System.out.println();
         int dato;
         dato = 0;
@@ -26,9 +26,20 @@ public class Leer {
         }
         return dato;
     }
-        
     
-    public double leerDouble(){
+     public double leerFloat(String mensaje){
+        System.out.println();
+        float dato;
+        dato = 0;
+        try{
+            dato = Integer.parseInt(bf.readLine());
+        }catch(IOException | NumberFormatException e) {
+            System.out.println("Error al ingresar el numero decimal, Intente de nuevo");
+        }
+        return dato;}
+    
+    
+    public double leerDouble(String mensaje){
         System.out.println();
         double dato;
         dato = 0.0;
