@@ -7,34 +7,97 @@ package com.mycompany.calculadora;
 import Util.Leer;
 
 /**
- *
+ *La clase {@code OperadoresCadenas} proporciona métodos para realizar operaciones con cadenas de texto,
+ * como concatenar, obtener la longitud, extraer subcadenas, buscar una cadena dentro de otra, y cambiar 
+ * el formato de la cadena. Además, incluye un menú interactivo para ejecutar estas operaciones.
  * @author Usuario
  */
 public class OperadoresCadenas {
+     /**
+     * Concadena dos cadenas de texto.
+     * 
+     * @param str1 La primera cadena.
+     * @param str2 La segunda cadena.
+     * retorna La cadena resultante de concatenar {str1} y {str2}.
+     */
     public String concatenate(String str1, String str2) {
         return str1 + str2;
     }
+     /**
+     * Obtiene la longitud de una cadena de texto.
+     * 
+     * @param str La cadena de texto.
+     * retorna La longitud de la cadena {str}.
+     */
     public int length(String str) {
         return str.length();
     }
+    /**
+     * Extrae una subcadena de una cadena de texto dada una posición inicial y final.
+     * 
+     * @param str La cadena de texto original.
+     * @param start El índice de inicio (inclusive) de la subcadena.
+     * @param end El índice de fin (exclusivo) de la subcadena.
+     * retorna La subcadena extraída de {str} entre {start} y {end}.
+     */
     public String substring(String str, int start, int end) {
         return str.substring(start, end);
     }
+    /**
+     * Verifica si una cadena contiene otra cadena.
+     * 
+     * @param str1 La cadena principal.
+     * @param str2 La cadena a buscar.
+     * retorna {true} si {str1} contiene {str2}, {false} en caso contrario.
+     */
     public boolean contains(String str1, String str2) {
         return str1.contains(str2);
     }
+    /**
+     * Convierte una cadena de texto a mayúsculas.
+     * 
+     * @param str La cadena de texto a convertir.
+     * retorna La cadena convertida a mayúsculas.
+     */
     public String toUpperCase(String str) {
         return str.toUpperCase();
     }
+     /**
+     * Convierte una cadena de texto a minúsculas.
+     * 
+     * @param str La cadena de texto a convertir.
+     * retorna La cadena convertida a minúsculas.
+     */
     public String toLowerCase(String str) {
         return str.toLowerCase();
     }
+    /**
+     * Compara dos cadenas de texto para verificar si son iguales.
+     * 
+     * @param str1 La primera cadena.
+     * @param str2 La segunda cadena.
+     * retorna @code true} si {@code str1} es igual a {@code str2}, {@code false} en caso contrario.
+     */
     public boolean equals(String str1, String str2) {
         return str1.equals(str2);
     }
+    /**
+     * Reemplaza todas las ocurrencias de una subcadena en una cadena por otra subcadena.
+     * 
+     * @param str La cadena de texto original.
+     * @param target La subcadena a reemplazar.
+     * @param replacement La subcadena de reemplazo.
+     * retorna a cadena resultante después de reemplazar {@code target} por {@code replacement}.
+     */
     public String replace(String str, String target, String replacement) {
         return str.replace(target, replacement);
     }
+    /**
+     * Muestra un menú interactivo para gestionar operaciones con cadenas y ejecuta la operación seleccionada
+     * por el usuario.
+     * 
+     * @param leer La instancia de la clase {@code Leer} utilizada para la entrada del usuario.
+     */
     public static void menu(Leer leer) {
         OperadoresCadenas chainsOperations = new OperadoresCadenas();
         System.out.println("\nSeleccione una opcion:");
