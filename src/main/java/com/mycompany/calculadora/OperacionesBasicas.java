@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.andruw.calculadorapar;
+package com.mycompany.calculadora;
 import Util.Leer;
 
 /**
@@ -98,5 +98,37 @@ public class OperacionesBasicas {
     }
     System.out.println("El resultado del módulo es: " + resultado);
 }
-
+    
+public static void menu(Leer leer){
+        int x;
+        x = 0;
+        while(x!=6){
+            System.out.println("------------Calculadora-------------");
+            System.out.println("bienvenido que operacion desea hacer");
+            System.out.println("1.Sumar\n2.Restar\n3.Multiplicar\n4.Dividir\n5.modulo\n6.salir");
+                x = leer.leerInt("");
+            switch(x){
+                case 1:
+                   Sumar(leer);
+                    break;
+                case 2:
+                    Restar(leer);
+                    break;
+                case 3:
+                    Multiplicar(leer);
+                    break;
+                case 4:
+                    Dividir(leer);
+                    break;
+                case 5:
+                    Modulo(leer);
+                    break;
+                case 6:
+                    System.out.println("Hasta pronto");
+                default:
+                    System.out.println("escribio un numero incorrecto vuelva a intentar");
+            }
+         }
+    
+}
 }

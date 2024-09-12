@@ -2,36 +2,36 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.andruw.calculadorapar;
+package com.mycompany.calculadora;
 import Util.Leer;
 /**
  *
  * @author andre
  */
 public class CalculadoraPar {
- public static void menu(Leer leer){
-        int x;
-        x = 0;
-        while(x!=5){
+ public static void menuPrincipal(Leer leer){
+     int x;
+     x = 0;
+     while(x!=5){
             System.out.println("------------Calculadora-------------");
-            System.out.println("bienvenido que operacion desea hacer");
-            System.out.println("1.Sumar\n2.Restar\n3.Multiplicar\n4.Dividir\n5.salir");
+            System.out.println("bienvenido que tipo de operadores desea usar");
+            System.out.println("1.aritmeticos\n2.binarios\n3.relacionales\n4.incrementales y aritmeticos\n5.booleanos \n6.cadenas\n7.salir");
                 x = leer.leerInt("");
             switch(x){
                 case 1:
-                    OperacionesBasicas.Sumar(leer);
+                    OperacionesBasicas.menu(leer);
                     break;
                 case 2:
-                    OperacionesBasicas.Restar(leer);
+                    OperadoresBinarios.menu(leer);
                     break;
                 case 3:
-                    OperacionesBasicas.Multiplicar(leer);
+                    OperadoresRelacionales.menu(leer);
                     break;
                 case 4:
-                    OperacionesBasicas.Dividir(leer);
+                    //OperacionesIncrementales.menu(leer);
                     break;
                 case 5:
-                    OperacionesBasicas.Modulo(leer);
+                    OperadoresBooleanos.menu(leer);
                     break;
                 case 6:
                     System.out.println("Hasta pronto");
@@ -39,11 +39,10 @@ public class CalculadoraPar {
                     System.out.println("escribio un numero incorrecto vuelva a intentar");
             }
          }
-         
-    }
+ }
 
     public static void main(String[] args) {
        Leer leer = new Leer();
-        menu(leer);
+        menuPrincipal(leer);
     }
 }
