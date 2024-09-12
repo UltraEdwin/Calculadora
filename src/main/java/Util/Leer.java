@@ -50,4 +50,15 @@ public class Leer {
         }
         return dato;
     }
+    
+    public String leerString(String mensaje) {
+        System.out.println(mensaje);
+        String dato = "";
+        try {
+            dato = bf.readLine(); // Leer la entrada del usuario como una cadena
+        } catch (IOException e) {
+            System.out.println("Error al ingresar la cadena, intente de nuevo");
+        }
+        return dato;
+    }
 }

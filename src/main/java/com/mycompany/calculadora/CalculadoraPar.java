@@ -12,7 +12,7 @@ public class CalculadoraPar {
  public static void menuPrincipal(Leer leer){
      int x;
      x = 0;
-     while(x!=5){
+     while(x!=7){
             System.out.println("------------Calculadora-------------");
             System.out.println("bienvenido que tipo de operadores desea usar");
             System.out.println("1.aritmeticos\n2.binarios\n3.relacionales\n4.incrementales y aritmeticos\n5.booleanos \n6.cadenas\n7.salir");
@@ -28,13 +28,17 @@ public class CalculadoraPar {
                     OperadoresRelacionales.menu(leer);
                     break;
                 case 4:
-                    //OperacionesIncrementales.menu(leer);
+                    OperadoresIncrementales.menu(leer);
                     break;
                 case 5:
                     OperadoresBooleanos.menu(leer);
                     break;
                 case 6:
+                    OperadoresCadenas.menu(leer);
+                    break;
+                case 7:
                     System.out.println("Hasta pronto");
+                    break;
                 default:
                     System.out.println("escribio un numero incorrecto vuelva a intentar");
             }
